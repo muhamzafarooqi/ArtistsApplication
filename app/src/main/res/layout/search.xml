@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_10"
+    android:layout_marginTop="@dimen/material_padding_half"
+    android:layout_marginBottom="@dimen/material_padding"
+    card_view:cardCornerRadius="@dimen/radius_2">
+
+    <EditText
+        android:id="@+id/searchCardEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginVertical="@dimen/material_padding_half"
+        android:layout_marginStart="@dimen/material_padding_half"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:autofillHints="@string/app_name"
+        android:background="@null"
+        android:drawableStart="@drawable/baseline_search_24"
+        android:drawablePadding="@dimen/padding_22"
+        android:focusableInTouchMode="true"
+        android:hint="@string/search"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        tools:text="John Doe">
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/searchCardClear"
+        android:layout_width="@dimen/width_25"
+        android:layout_height="@dimen/height_25"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="@dimen/material_padding_half"
+        android:background="@drawable/close_icon"
+        android:contentDescription="@string/cancel"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_cancel" />
+</androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,23 @@
+query MyArtists ($id: String!, $offset:String!) {
+  search {
+    artists(query: $id, first:20, after:$offset) {
+      nodes {
+        id
+        name
+        disambiguation
+      }
+      pageInfo{
+                hasNextPage
+                hasPreviousPage
+                endCursor
+            }
+            totalCount
+    }
+  }
+}
+
+fragment ArtistBasicFragment on Artist {
+  id
+  name
+  disambiguation
+}
